@@ -19,9 +19,6 @@ var SongQueue = Songs.extend({
       this.remove(song);
     });
 
-    this.on('enqueue',function(song){
-      this.add(song);
-    });
 
   },
 
