@@ -10,8 +10,19 @@ var SongQueue = Songs.extend({
 
     this.on('ended',function(){
       this.shift();
-      this.playFirst();
+      if(this.length > 0) {
+        this.playFirst();
+      }
     });
+
+    this.on('dequeue',function(song){
+      this.remove(song);
+    });
+
+    this.on('enqueue',function(song){
+      this.add(song);
+    });
+
   },
 
   playFirst: function() {

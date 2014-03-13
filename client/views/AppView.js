@@ -11,7 +11,7 @@ var AppView = Backbone.View.extend({
 
     var context = this;
     $(this.playerView.el).on('ended', function() {
-      context.model.attributes.songQueue.at(0).end();
+      context.model.attributes.songQueue.at(0).ended();
     });
 
   },
