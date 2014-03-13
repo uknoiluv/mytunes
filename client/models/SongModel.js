@@ -2,11 +2,11 @@
 var SongModel = Backbone.Model.extend({
 
   initialize: function(params){
-    if(params) {
-      this.set('artist', params.artist);
-      this.set('title', params.title);
-      this.set('url', params.url);
-    }
+    // if(params) {
+    //   this.set('artist', params.artist);
+    //   this.set('title', params.title);
+    //   this.set('url', params.url);
+    // }
   },
 
   enqueue: function(){

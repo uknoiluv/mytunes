@@ -27,8 +27,7 @@ describe('PlayerView', function() {
   });
 
   describe('Song transitions', function() {
-    xit('dequeues a song when finished playing & plays the next song', function(){
-      library.at(0).play();
+    it('dequeues a song when finished playing & plays the next song', function(){
       var originalSong = appView.playerView.model;
       appView.model.get('songQueue').add(library.at(1));
       // Simulate a song end event being triggered
@@ -36,5 +35,4 @@ describe('PlayerView', function() {
       expect(appView.playerView.model).to.not.equal(originalSong);
     });
   });
-
 });
