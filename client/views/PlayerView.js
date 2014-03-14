@@ -14,6 +14,8 @@ var PlayerView = Backbone.View.extend({
   },
 
   render: function(){
+    this.$el.addClass('player');
+    this.$el.append('<button>save as new playlist</button>');
     return this.$el.attr('src', this.model ? this.model.get('url') : '');
   }
 

@@ -15,11 +15,13 @@ var SongQueue = Songs.extend({
       }
     });
 
-    this.on('dequeue',function(song){
-      this.remove(song);
+    this.on('dequeue', function(song){
+      if(song === this.at(0)){
+        song.ended();
+      }else {
+        this.remove(song);
+      }
     });
-
-
   },
 
   playFirst: function() {
